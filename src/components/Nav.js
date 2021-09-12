@@ -6,17 +6,26 @@ function Nav() {
 
     const [show, handleShow] = useState(false);
 
+/* Handle for the navbar transition animations: */
     const transitionNavbar = () => {
         if(window.scrollY > 100) {
             handleShow(true);
         } else {
             handleShow(false);
         }
-    }
+    };
+
+    useEffect( () => {
+        window.addEventListener("scroll", transitionNavbar);
+
+    /* Cleanup the function: */
+        return () => window.removeEventListener("scroll", transitionNavbar);
+
+    }, []);
 
 
     return (
-        <div className="nav nav_black">
+        <div className={`nav ${show && 'nav_black'}`}>
             <div className="nav_contents">
 
                 <img 
