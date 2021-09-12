@@ -4,7 +4,7 @@ import "./Nav.css";
 function Nav() {
 
 
-    const [show, handleShow] = useState(false);
+    const [show, handleShow] = useState(false); //state for nav animation
 
 /* Handle for the navbar transition animations: */
     const transitionNavbar = () => {
@@ -15,6 +15,7 @@ function Nav() {
         }
     };
 
+/* useEffect hook to listen to window scroll for navbar animations: */
     useEffect( () => {
         window.addEventListener("scroll", transitionNavbar);
 
