@@ -1,4 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+### `npm create-react-app netflix-clone --template redux`
+
+### ` sudo npm install -g firebase-tools` (To override permissions).  Install Firebase tools into CLI
 
 ## Available Scripts
 
