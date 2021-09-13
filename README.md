@@ -3,6 +3,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### ` sudo npm install -g firebase-tools` (To override permissions).  Install Firebase tools into CLI
 
+## `npm i axios` My http request library
+
 ## Available Scripts
 
 In the project directory, you can run:

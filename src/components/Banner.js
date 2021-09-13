@@ -1,7 +1,29 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Banner.css';
 
+import requests from "../Api/Requests";
+import axios from "../Api/axios";
+
 function Banner() {
+
+    const [ movie, setMovie ] = useState([]); //state for movie img in banner
+
+    useEffect( () => {
+        async function fetchData() {
+            const request = await axios.get(requests.fetchNetlixOriginals);
+            setMovie(
+                request.data.results[
+                    Math.floor(Math.random() * request.data.results.length - 1)
+                ]
+            );
+
+            return request;
+        }
+        fetchData();
+       
+    }, []);
+
+    console.log(movie);
 
 
 /* Truncate the text in description: */
