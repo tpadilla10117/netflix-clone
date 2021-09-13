@@ -4,6 +4,8 @@ import './Banner.css';
 import requests from "../Api/Requests";
 import axios from "../Api/axios";
 
+/* const BASE_URL = 'https://api.themoviedb.org/3'; */
+
 function Banner() {
 
     const [ movie, setMovie ] = useState([]); //state for movie img in banner

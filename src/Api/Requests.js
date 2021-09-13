@@ -1,4 +1,9 @@
-const API_KEY = "3b1e7eb612fd67ed6193349b0fa88ebe";
+require('dotenv').config();
+
+/* const API_KEY = "3b1e7eb612fd67ed6193349b0fa88ebe"; */
+/* console.log("HEre is my API Key:", API_KEY); */
+
+const API_KEY = process.env.REACT_APP_TMBD_KEY;
 
 const requests = {
 
