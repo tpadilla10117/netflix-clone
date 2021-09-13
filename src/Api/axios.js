@@ -7,7 +7,13 @@ require('dotenv').config();
 
 const instance = axios.create({
     baseURL: "https://api.themoviedb.org/3",
-    /* header: { 'Authorization': `Bearer ${token}`} */
+    /* backdrop_sizes: [
+        "w300",
+        "w780",
+        "w1280",
+        "original"
+      ], */
+    
 });
 
 export default instance;
