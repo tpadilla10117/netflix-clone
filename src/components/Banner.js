@@ -4,7 +4,7 @@ import './Banner.css';
 import requests from "../Api/Requests";
 import axios from "../Api/axios";
 
-/* const BASE_URL = 'https://api.themoviedb.org/3'; */
+const BASE_URL = 'https://api.themoviedb.org/3';
 
 function Banner() {
 
@@ -39,7 +39,7 @@ function Banner() {
     return (
         <header className="banner" style={ {
             backgroundSize: "cover",
-            backgroundImage: `url("https://image.tmbd.org/t/p/original${movie?.backdrop_path}")`,
+            backgroundImage: `url("https://image.tmdb.org/t/p/original${movie?.backdrop_path}")`,
             backgroundPosition: "center center",
         }}>
 
