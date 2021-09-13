@@ -1,7 +1,7 @@
 import React from 'react';
 import "./Homescreen.css";
 
-import {Nav} from '../utils';
+import { Nav, Banner} from '../utils';
 
 function HomeScreen() {
     return (
@@ -9,27 +9,8 @@ function HomeScreen() {
 
             
             <Nav />
-            <h1>TEST</h1>
-            <h1>TEST</h1>
-            <h1>TEST</h1>
-            <h1>TEST</h1>
-            <h1>TEST</h1>
-            <h1>TEST</h1>
-            <h1>TEST</h1>
-            <h1>TEST</h1>
-            <h1>TEST</h1>
-            <h1>TEST</h1>
-            <h1>TEST</h1>
-            <h1>TEST</h1>
-            <h1>TEST</h1>
-            <h1>TEST</h1>
-            <h1>TEST</h1>
-            <h1>TEST</h1>
-            <h1>TEST</h1>
-            <h1>TEST</h1>
-            <h1>TEST</h1>
-            <h1>TEST</h1>
-            {/* Banner */}
+            
+            <Banner />
 
 
 
