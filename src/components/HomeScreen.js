@@ -16,49 +16,49 @@ function HomeScreen() {
 
             <Row 
                 title="NETFLIX ORIGINALS"
-                fetchURL={requests.fetchNetflixOriginals}
+                fetchUrl={requests.fetchNetflixOriginals}
                 isLargeRow
             />
 
             <Row 
                 title="Trending Now"
-                fetchURL={requests.fetchTrending}
+                fetchUrl={requests.fetchTrending}
                 isLargeRow
             />
 
             <Row 
                 title="Top Rated"
-                fetchURL={requests.fetchTopRated}
+                fetchUrl={requests.fetchTopRated}
                 isLargeRow
             />
 
              <Row 
                 title="Action Movies"
-                fetchURL={requests.fetchActionMovies}
+                fetchUrl={requests.fetchActionMovies}
                 isLargeRow
             />
 
              <Row 
                 title="Comedy Movies"
-                fetchURL={requests.fetchComedyMovies}
+                fetchUrl={requests.fetchComedyMovies}
                 isLargeRow
             />
 
              <Row 
                 title="Horror Movies"
-                fetchURL={requests.fetchHorrorMovies}
+                fetchUrl={requests.fetchHorrorMovies}
                 isLargeRow
             />
 
              <Row 
                 title="Romance Movies"
-                fetchURL={requests.fetchRomanceMovies}
+                fetchUrl={requests.fetchRomanceMovies}
                 isLargeRow
             />
 
              <Row 
                 title="Documentaries"
-                fetchURL={requests.fetchDocumentaries}
+                fetchUrl={requests.fetchDocumentaries}
                 isLargeRow
             />
 
