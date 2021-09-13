@@ -19,4 +19,6 @@ const requests = {
 
 };
 
+console.log("Sample:", requests.fetchNetflixOriginals)
+
 export default requests;
