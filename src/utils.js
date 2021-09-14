@@ -4,6 +4,8 @@
 
     export { default as LoginScreen } from './components/screens/LoginScreen.js';
 
+    export { default as SignupScreen } from './components/screens/SignupScreen.js';
+
     export { default as Nav } from './components/Nav.js';
 
     export { default as Banner } from './components/Banner.js';
