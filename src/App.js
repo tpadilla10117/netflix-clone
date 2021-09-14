@@ -6,22 +6,34 @@ import {
   Route
 } from 'react-router-dom';
 
-import { HomeScreen } from './utils';
+import { HomeScreen, LoginScreen } from './utils';
 
 
 import './App.css';
 
 function App() {
+
+  const user = null;
+
   return (
     <div className="App">
 
         <Router>
-      
-          <Switch>
-            <Route path="/">
+
+          {!user ? (
+            <LoginScreen />
+          ) : (
+            <Switch>
+            <Route exact path="/">
               <HomeScreen />
             </Route>
+            <Route path="/test">
+              <h1>Test Route</h1>
+            </Route>
           </Switch>
+
+          )}
+    
       
          </Router>
 
