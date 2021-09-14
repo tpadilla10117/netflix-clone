@@ -1,11 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import './SignupScreen.css';
+/* import { auth } from '../../firebase.js'; */
+
 
 function SignupScreen () {
 
+    const emailRef = useRef(null);
+    const passwordRef = useRef(null);
 
     const register = (event) => {
         event.preventDefault();
+
+        /* auth.createUserWithEmailAndPassword() */
     };
 
     const signIn = (event) => {
@@ -18,8 +24,8 @@ function SignupScreen () {
         <div className="signupScreen">
             <form>
                 <h1>Sign In</h1>
-                <input placeholder="Email" type="email" />
-                <input placeholder="Password" />
+                <input placeholder="Email" type="email" ref={emailRef}/>
+                <input placeholder="Password" ref={passwordRef}/>
                 <button type="submit" onClick={signIn}>Sign In</button>
 
                 <h4> <span className="signupScreen_gray">New to Netflix? </span>

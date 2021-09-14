@@ -1,6 +1,5 @@
     import firebase from "firebase";
 
-
 /* Firebase configuration object containing keys and identifiers for the app: */
 
     const firebaseConfig = {
