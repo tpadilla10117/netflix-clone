@@ -6,7 +6,7 @@ import {
   Route
 } from 'react-router-dom';
 
-import { HomeScreen, LoginScreen } from './utils';
+import { HomeScreen, LoginScreen, ProfileScreen } from './utils';
 import {auth} from './firebase';
 import { useDispatch, useSelector } from 'react-redux';
 import { logout, login, selectUser } from "./features/userSlice";
@@ -47,12 +47,15 @@ function App() {
             <LoginScreen />
           ) : (
             <Switch>
+
+            <Route path='/profile'>
+              <ProfileScreen />
+            </Route>
+
             <Route exact path="/">
               <HomeScreen />
             </Route>
-            <Route path="/test">
-              <h1>Test Route</h1>
-            </Route>
+            
           </Switch>
 
           )}
