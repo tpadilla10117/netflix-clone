@@ -8,21 +8,30 @@ import {
 
 import { HomeScreen, LoginScreen } from './utils';
 import {auth} from './firebase';
-
+import { useDispatch, useSelector } from 'react-redux';
+import { logout, login, selectUser } from "./features/userSlice";
 import './App.css';
 
 function App() {
 
-  const user = null;
+  const user = useSelector(selectUser); //we use the selector made in userSlice to get the user info. from the store
+
+  const dispatch = useDispatch(); //to dispatch actions into the global store
 
 /* Listens to authenticated state change: */
   useEffect( () => {
     const unsubscribe = auth.onAuthStateChanged(userAuth => {
       if (userAuth) {
-        //Logged in
+        //Logged in - dispatches user object into global store
+        dispatch(login({
+          uid: userAuth.uid,
+          email: userAuth.email,
+        }) 
+        )
         console.log(userAuth)
       } else {
-        //logged out
+        //logged out - dispatched logout into store
+        dispatch(logout)
       }
     })
 
