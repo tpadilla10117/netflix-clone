@@ -1,5 +1,5 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
-### `npm create-react-app netflix-clone --template redux`
+### `npx create-react-app netflix-clone --template redux`
 
 ### `npm install react-router-dom` Installed React Router
 

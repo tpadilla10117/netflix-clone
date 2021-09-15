@@ -8,7 +8,6 @@ import {
 
 import { HomeScreen, LoginScreen } from './utils';
 
-
 import './App.css';
 
 function App() {

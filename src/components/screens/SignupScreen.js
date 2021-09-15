@@ -1,7 +1,6 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useRef } from "react";
 import './SignupScreen.css';
-/* import { auth } from '../../firebase.js'; */
-
+import {auth} from '../../firebase';
 
 function SignupScreen () {
 
@@ -11,7 +10,14 @@ function SignupScreen () {
     const register = (event) => {
         event.preventDefault();
 
-        /* auth.createUserWithEmailAndPassword() */
+        auth.createUserWithEmailAndPassword(
+            emailRef.current.value,
+            passwordRef.current.value
+        ).then( (authUser) => {
+            console.log("Here is my user:", authUser)
+        }).catch(error => {
+            alert(error.message)
+        }); //firebase func points to current value
     };
 
     const signIn = (event) => {
@@ -22,16 +28,19 @@ function SignupScreen () {
 
     return (
         <div className="signupScreen">
+            
             <form>
                 <h1>Sign In</h1>
                 <input placeholder="Email" type="email" ref={emailRef}/>
-                <input placeholder="Password" ref={passwordRef}/>
+                <input placeholder="Password" type="password" ref={passwordRef}/>
                 <button type="submit" onClick={signIn}>Sign In</button>
 
                 <h4> <span className="signupScreen_gray">New to Netflix? </span>
+                
                 <span className="signupScreen_link" onClick={register}>Sign Up now.</span>
                 </h4>
             </form>
+
         </div>
     );
 };

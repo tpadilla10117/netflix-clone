@@ -4,7 +4,7 @@ import './Banner.css';
 import requests from "../Api/Requests";
 import axios from "../Api/axios";
 
-const BASE_URL = 'https://api.themoviedb.org/3';
+/* const BASE_URL = 'https://api.themoviedb.org/3'; */
 
 function Banner() {
 
