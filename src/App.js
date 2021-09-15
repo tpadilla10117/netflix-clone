@@ -31,12 +31,12 @@ function App() {
         console.log(userAuth)
       } else {
         //logged out - dispatched logout into store
-        dispatch(logout)
+        dispatch(logout())
       }
     })
 
     return unsubscribe;
-  }, [])
+  }, [dispatch])
 
   return (
     <div className="App">
