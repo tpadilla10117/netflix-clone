@@ -7,6 +7,7 @@ function SignupScreen () {
     const emailRef = useRef(null);
     const passwordRef = useRef(null);
 
+/* Function for registering a new user: */
     const register = (event) => {
         event.preventDefault();
 
@@ -20,8 +21,19 @@ function SignupScreen () {
         }); //firebase func points to current value
     };
 
+/* Function for signing in a registered user: */
     const signIn = (event) => {
         event.preventDefault();
+
+        auth.signInWithEmailAndPassword(
+            emailRef.current.value,
+            passwordRef.current.value
+        ).then( (authUser) => {
+            console.log("Here is my signed in user:", authUser)
+        })
+        .catch( (error) => {
+            alert(error.message);
+        });
     };
 
 
