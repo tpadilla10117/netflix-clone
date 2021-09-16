@@ -1,5 +1,5 @@
 import React from 'react';
-import {Nav} from "../../utils";
+import {Nav, PlansScreen} from "../../utils";
 import "./ProfileScreen.css"
 import { useSelector } from "react-redux";
 import { selectUser } from "../../features/userSlice";
@@ -27,6 +27,8 @@ function ProfileScreen () {
                         <div className="profileScreen_plans">
                             <h3>Plans</h3>
                             
+                            <PlansScreen />
+
                             <button className="profileScreen_signOut" onClick={ () => auth.signOut()}>Sign Out</button>
                         </div>
                     </div>
