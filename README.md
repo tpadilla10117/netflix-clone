@@ -7,6 +7,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### `npm install firebase`
 
+### `npm install @stripe/stripe-js ` To install Stripe Api
+
 ## `npm i axios` My http request library
 
 ## Available Scripts
