@@ -51,3 +51,16 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## Firebase Extensions
+
+1) Stripe (Blaze Plan needed)
+
+## Notes
+
+1) Stripe Test API Key needed for Stripe Extension in Firestore
+
+2) Set Cloud Firestore secruity rules -> copy from documentation
+https://github.com/stripe/stripe-firebase-extensions/blob/master/firestore-stripe-subscriptions/POSTINSTALL.md
+
+3) Configure Stripe webhooks -> use configs from firebase dashboard
