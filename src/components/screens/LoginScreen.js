@@ -18,6 +18,13 @@ function LoginScreen() {
                     alt="" 
                 />
 
+                <div className="loginScreen_dropdown">
+                    <select name="languages" className="loginScreen_dropdownSelect">
+                        <option className="loginScreen_dropdownOption">English</option>
+                        <option className="loginScreen_dropdownOption">Spanish</option>
+                    </select>
+                </div>
+
                 <button className="loginScreen_button" onClick={() => setSignIn(true)}>
                     Sign In
                 </button>
