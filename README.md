@@ -66,3 +66,5 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 https://github.com/stripe/stripe-firebase-extensions/blob/master/firestore-stripe-subscriptions/POSTINSTALL.md
 
 3) Configure Stripe webhooks -> use configs from firebase dashboard
+
+4) Continuous Deployment -> `firebase login` -> `npm run build` -> `firebase deploy`
