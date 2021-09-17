@@ -8,7 +8,7 @@ import './PlansScreen.css';
 function PlansScreen() {
 
     const [ products, setProducts ] = useState([]);
-    const [ subscription, setSubscription ] = useState(null);
+    const [ subscription, setSubscription ] = useState('');
 
 /* Creating a user from the selectUser selector in redux store: */
     const user = useSelector(selectUser)
