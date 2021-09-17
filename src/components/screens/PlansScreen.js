@@ -90,6 +90,7 @@ function PlansScreen() {
 
     return (
         <div className="plansScreen">
+                {subscription && <p>Renewal Date: {new Date(subscription?.current_period_end * 1000).toLocaleDateString()} </p>}
             {/* Have to extract from an object: */}
             {Object.entries(products).map( ([productId, productData]) => {
                 // TODO: logic to check if user's subsctription is active:
@@ -98,7 +99,8 @@ function PlansScreen() {
                     .includes(subscription.role);
 
                 return (
-                    <div className="plansScreen_plan">
+                    <div className={`${
+                        isCurrentPackage && "plansScreen_plan--disabled"} plansScreen_plan`} key={productId} >
                         <div className="plansScreen_info">
                             <h5>{productData.name}</h5>
                             <h6>{productData.description}</h6>
